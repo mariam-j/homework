@@ -1,0 +1,119 @@
+1.
+
+function largestNumbers (arr, num) {
+
+let newArr = arr.filter((element) => element > num);
+
+if (!newArr.length) {
+
+return 'Such numbers do not exist'
+}
+
+return newArr;
+}
+
+
+2.
+function evenNumbers (num1, num2) {
+
+let arr = [];
+let number;
+for (let i = num1; i <=num2; i++) {
+
+if (i % 2 == 0) {
+
+number = i;
+
+let str = number.toString().split('');
+
+let res = str.reduce((total, sum) => (total%2) + (sum%2));
+
+if (res == 0) {
+arr.push(str.join(''));
+
+}
+
+}
+
+}
+if (!arr.length) {
+
+return 'Such numbers do not exist';
+
+}
+
+return arr.join(',');
+
+}
+
+2.
+
+function evenNumbers (num1, num2) {
+
+let arr = [];
+
+let number;
+
+let str;
+
+for (let i = num1; i <=num2; i++) {
+
+
+if (i % 2 == 0) {
+
+
+number = i;
+
+
+let str = number.toString().split('');
+
+
+arr.push(str.join(''));
+
+
+for (let j = 0; j < str.length; j ++) {
+
+
+if (str[j] % 2 !== 0) {
+
+
+arr.splice(str.indexOf(str[j].length), 1)
+
+}
+
+}
+
+}
+
+}
+if (!arr.length) {
+
+return 'Such values do not exist';
+}
+return arr.join(',');
+
+}
+
+5.
+function array (arr) {
+
+let x;
+
+for (let i = 0; i < arr.length; i ++) {
+
+if (arr[i] > arr[i+1]) {
+
+let x = arr[i+1];
+
+return arr.indexOf(x);
+
+}
+
+}
+
+return arr.indexOf(x);
+
+}
+
+
+
