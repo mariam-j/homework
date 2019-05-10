@@ -1,0 +1,80 @@
+
+
+//2
+
+function recFlatten(arr) {
+
+    if (typeof arr === 'number') {
+
+        return [arr];
+
+    } else if (!arr.length) {
+
+        return [];
+
+    } else {
+
+        return recFlatten(arr[0]).concat(recFlatten(arr.slice(1)));
+    }
+}
+
+//3
+function sumNum(num) {
+
+
+    if (num < 10) {
+
+
+
+        return num;
+
+
+
+    } else {
+
+
+
+        return sumNum(num.toString().split('').map(Number).reduce((sum, num) => sum + num));
+
+
+    }
+
+}
+
+//4
+
+function arrRotate(arr, num) {
+
+
+    if (num == 0) {
+
+
+        return arr;
+
+
+    } else {
+
+
+        if (num > 0) {
+
+
+            let tmp = arr.shift();
+
+
+            arr.push(tmp);
+
+
+        } else if (num < 0) {
+
+
+            let tmp = arr.pop();
+
+
+            arr.unshift(tmp);
+
+        }
+
+
+        return arrRotate(arr, num < 1 ? num + 1 : num - 1);
+
+    }
