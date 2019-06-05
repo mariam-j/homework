@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    max-width: 900px;
+    margin: 0 auto;
+    h1 {
+        text-transform: uppercase;
+        background-image: url(../img/sleep.jpg);
+        background-repeat: no-repeat;
+        height: 150px;
+        text-align: center;
+        line-height: 150px;
+        color: #464646;
+        background-color: #FEFEFE;
+        border-bottom: 2px solid #464646;
+        border-right: 2px solid #464646;
+    }
+    button {
+        text-transform: uppercase;
+    }
+    #buttInp {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 4px;
+        input {
+            flex-basis: 95%;
+            height: 25px;
+            outline: none;
+            &:focus {
+                box-shadow: 6px 0px 6px darkgrey;
+            }
+        }
+        button {
+            flex-basis: 5%;
+            border: 1px solid #464646;
+            cursor: pointer;
+            &:hover {
+                background-color: #464646;
+                color: white;
+            }
+        }
+    }
+    #list {
+        .flexDiv {
+            background-color: #C0C0C0;
+            &:nth-child(odd) {
+                background-color: #F2E6E6;
+            }
+            margin-bottom: 2px;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            &:hover {
+                background-color: #A5A39C;
+            }
+            border-radius: 0 10px 10px 0;
+            .newDiv,
+            .newButt {
+                padding: 10px;
+            }
+            .newButt {
+                border: none;
+                background-color: #F2CCCC;
+                font-size: 10px;
+                cursor: pointer;
+                border-radius: 10px;
+                &:hover {
+                    background-color: #464646;
+                    color: white;
+                }
+            }
+        }
+    }
+}
