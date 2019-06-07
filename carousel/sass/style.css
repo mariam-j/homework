@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  max-width: 1100px;
+  margin: 100px auto;
+  padding: 20px 0;
+  background-color: #E2E2E2;
+  position: relative;
+  background-image: url(../img/backImg.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 10px solid #040404;
+  border-radius: 100px 200px;
+}
+
+#container #play {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  padding: 10px 20px;
+  background-color: #ccc;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  outline: 0;
+  font-size: 16px;
+}
+
+#container #play:hover {
+  -webkit-box-shadow: 0px 0px 10px red;
+          box-shadow: 0px 0px 10px red;
+  color: red;
+}
+
+#container p {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: calc(50% - 25px);
+  font-size: 25px;
+  height: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: transparent;
+  text-shadow: 5px 5px 5px red;
+  letter-spacing: 10px;
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  z-index: 1;
+}
+
+@-webkit-keyframes move {
+  0% {
+    position: absolute;
+    left: 0;
+    text-shadow: 5px 5px 5px red;
+  }
+  100% {
+    position: absolute;
+    left: 65%;
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    position: absolute;
+    left: 0;
+    text-shadow: 5px 5px 5px red;
+  }
+  100% {
+    position: absolute;
+    left: 65%;
+    text-shadow: none;
+  }
+}
+
+#container #imgInput {
+  max-width: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+#container #imgContainer {
+  max-width: 500px;
+  position: relative;
+  margin: 30px auto;
+}
+
+#container #imgContainer img {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+}
+
+#container #imgContainer #buttRight,
+#container #imgContainer #buttLeft {
+  position: absolute;
+  top: calc(50% - 15px);
+  border: none;
+  outline: none;
+  background-color: none;
+  cursor: pointer;
+  height: 40px;
+  padding: 0 10px;
+  line-height: 40px;
+  background-color: transparent;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#container #imgContainer #buttRight:hover,
+#container #imgContainer #buttLeft:hover {
+  background-color: #1E1E1E;
+  opacity: .8;
+}
+
+#container #imgContainer #buttRight {
+  right: 0;
+}
+/*# sourceMappingURL=style.css.map */
